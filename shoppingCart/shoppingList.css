@@ -1,0 +1,100 @@
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  max-width: 536px;
+  max-height: 138px;
+  
+}
+
+.imageShoppingList {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+
+}
+.shoppingList{
+    height: 492px;
+    width: 536px;
+}
+.productDetail {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.titleShoppingList {
+  font-weight: 600;
+  font-size: 30px;
+  margin: 0 0 6px 0;
+  
+}
+
+.productIdShoppingList {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 12px 0;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.quantity-control .quantity-input {
+  width: 40px;
+  height: 28px;
+  margin: 0 6px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.priceTagShoppingList {
+  font-weight: 700;
+  font-size: 18px;
+  
+  white-space: nowrap;
+  margin-left: 16px;
+  flex-shrink: 0;
+}
+
+button.delete-btn {
+  margin-left: 12px;
+  padding: 6px 10px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+button.delete-btn:hover, button.minus-btn:hover,button.plus-btn:hover {
+  background-color: #22abca;
+}
