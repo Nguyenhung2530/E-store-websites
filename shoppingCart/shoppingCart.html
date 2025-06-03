@@ -7,13 +7,77 @@
   <link rel="stylesheet" href="shoppingList.css" />
 </head>
 <body>
-  <div class="shoppingCartContent">
-    <h2>SHOPPING CART</h2>
-    <div class="shoppingList">
-      
-      <div id="products"></div>
+  <div class="shoppingCartContent" style="display: flex;">
+
+    <!-- 🛒 DANH SÁCH SẢN PHẨM -->
+    <div class="shoppingMain">
+      <h2>SHOPPING CART</h2>
+      <div class="shoppingList">
+        <div id="products">
+          <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+        </div>
+      </div>
     </div>
-  </div>
+
+    <!-- 💳 PHẦN TÓM TẮT ĐƠN HÀNG -->
+    <div class="orderSumary">
+      <p style="font-size: 20px;"><b>Order Summary</b></p>
+
+      <!-- 🔖 MÃ GIẢM GIÁ -->
+      <div class="discountBox">
+        <label for="discountCode" class="orderLabel" style="opacity: 0.7;">
+          Discount code / Promo code
+        </label>
+        <div class="codeInput">
+          <input id="discountCode" placeholder="Enter code" />
+          <button class="applyCode">Apply</button>
+        </div>
+      </div>
+
+      <!-- 🎁 THẺ THƯỞNG -->
+      <div class="bonusBox" style="margin-top: 20px;">
+        <label for="bonusNumber" style="opacity: 0.7;">
+          Your bonus card number
+        </label>
+        <div class="codeInput">
+          <input id="bonusNumber" placeholder="Enter Card Number" />
+          <button class="applyCode">Apply</button>
+        </div>
+      </div>
+
+      <!-- 💰 TÍNH TOÁN GIÁ -->
+      <div class="prices">
+
+        <!-- Subtotal -->
+        <div class="subtotal">
+          <p><b>Subtotal</b></p>
+          <span id="subtotal-value">0$</span>
+        </div>
+
+        <!-- Estimated Tax -->
+        <div class="surcharge">
+          <div class="estimatedTax">
+            <p id="estimatedTax-Text">Estimated Tax</p>
+            <div id="estimatedTax-Value">0$</div>
+          </div>
+
+          <!-- Shipping Fee -->
+          <div class="shoppingFee">
+            <p>Estimated shipping & Handling</p>
+            <div id="shippingFee">50$</div>
+          </div>
+
+          <!-- Tổng cộng -->
+          <div class="total">
+            <a><b>Total</b></a>
+            <div id="totalValue">0$</div>
+          </div>
+        </div>
+      </div> <!-- .prices -->
+      <button class = 'checkout'><b>Checkout</b></button>
+    </div> <!-- .orderSumary -->
+
+  </div> <!-- .shoppingCartContent -->
 
   <script type="module" src="shoppingCart.js"></script>
 </body>

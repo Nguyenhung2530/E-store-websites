@@ -1,3 +1,13 @@
+.shoppingCartContent {
+  padding-top: 112px;
+  padding-left: 160px;
+  padding-bottom: 112px;
+  padding-right: 160px;
+  width: 1440px;
+  height: 880px;
+}
+
+
 .product-item {
   display: flex;
   align-items: center;
@@ -16,12 +26,13 @@
   height: 90px;
   object-fit: cover;
   border-radius: 8px;
-  flex-shrink: 0;
 
 }
 .shoppingList{
     height: 492px;
     width: 536px;
+    gap: 40px;
+   
 }
 .productDetail {
   flex-grow: 1;
@@ -80,6 +91,75 @@
   margin-left: 16px;
   flex-shrink: 0;
 }
+.shoppingMain {
+  width: 536px;
+  height: 556px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  border: 1px #EBEBEB solid;
+  border-radius: 10px;
+}
+
+.orderSumary {
+  width: 536px;
+  height: 656px;
+  padding-left: 64px;
+  padding-top: 30px;
+  box-sizing: border-box;
+  border: 1px #EBEBEB solid;
+  border-radius: 10px;
+}
+
+.codeInput {
+  display  : flex;
+  justify-content: space-between;
+  padding: 16px;
+  border : 1px gray solid;
+  width: 408px;
+  height: 64px;
+  align-items: center; 
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.applyCode {
+  background-color: white;
+  border: 1px black solid;
+  width: 76.45px;
+  height: 32px;
+  border-radius: 6px;
+  gap: 8px;
+  padding:8px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  padding-bottom: 0px;
+}
+
+#discountCode,#bonusNumber {
+  border: none;
+  width: 299.55px;
+  height: 24px;
+  outline: none;
+}
+
+.prices {
+  width: 408px;
+  height: 168px;
+  gap: 16px;  
+  
+}
+.subtotal, .estimatedTax,.shoppingFee,.total  {
+  
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-between;
+  width: 408px;
+  height: 32px;
+  
+}
 
 button.delete-btn {
   margin-left: 12px;
@@ -94,7 +174,22 @@ button.delete-btn {
   transition: background-color 0.2s ease;
   flex-shrink: 0;
 }
+button.checkout {
+  width: 408px;
+  height: 56px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+ 
+}
 
-button.delete-btn:hover, button.minus-btn:hover,button.plus-btn:hover {
+
+button.delete-btn:hover, button.minus-btn:hover,button.plus-btn:hover,button.checkout:hover, button.applyCode:hover {
   background-color: #22abca;
 }
+

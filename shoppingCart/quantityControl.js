@@ -1,3 +1,5 @@
+import { updatePriceDisplay } from "./updatePrices.js";
+
 export function createQuantityControl() {
   const quantity = document.createElement('div');
   quantity.className = 'quantity-control';
@@ -13,12 +15,24 @@ export function createQuantityControl() {
 
   minusBtn.addEventListener('click', () => {
     let val = parseInt(input.value);
-    if (val > 1) input.value = val - 1;
+    if (val > 1) {
+      input.value = val - 1;
+      updatePriceDisplay();
+    }
   });
 
   plusBtn.addEventListener('click', () => {
     let val = parseInt(input.value);
     input.value = val + 1;
+    updatePriceDisplay();
+  });
+
+  input.addEventListener('change', () => {
+    let val = parseInt(input.value);
+    if (isNaN(val) || val < 1) {
+      input.value = 1;
+    }
+    updatePriceDisplay();
   });
 
   return quantity;

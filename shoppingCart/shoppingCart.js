@@ -1,6 +1,8 @@
 import { createQuantityControl } from './quantityControl.js';
+import { updatePriceDisplay } from './updatePrices.js';
 
 export function addProduct(name, id, price, url) {
+  const shoppingList = document.querySelector('.shoppingList');
   const product = document.createElement('div');
   product.className = 'product-item';
 
@@ -33,23 +35,33 @@ export function addProduct(name, id, price, url) {
   product.appendChild(image);
 
   productDetail.appendChild(title);
-productDetail.appendChild(productId);
+  productDetail.appendChild(productId);
 
-product.appendChild(productDetail);
-product.appendChild(quantityControl);
-product.appendChild(priceTag);
-product.appendChild(deleteButton);
+  product.appendChild(productDetail);
+  product.appendChild(quantityControl);
+  product.appendChild(priceTag);
+  product.appendChild(deleteButton);
 
-
-  return product;
+  shoppingList.appendChild(product);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const products = document.getElementById('products');
-  products.appendChild(addProduct(
-    'Iphone14',
-    '938424',
-    '50000',
-    'https://stcv4.hnammobile.com/downloads/f/tong-hop-50-hinh-anh-iphone-15-moi-nhat-tren-thi-truong-hien-nay-01699258796.jpg'
-  ));
-});
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+
+
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+addProduct('Iphone14','#981389','5000','https://kenh14cdn.com/203336854389633024/2022/9/6/iphone-14-pro-1662448116247403396683.jpg')
+
+
+
+updatePriceDisplay();
