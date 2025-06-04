@@ -20,26 +20,29 @@ export function addProduct(name, id, price, url) {
   const productId = document.createElement('p');
   productId.textContent = `#${id}`;
   productId.className = 'productIdShoppingList';
-
-  const quantityControl = createQuantityControl();
-
+  
   const priceTag = document.createElement('p');
   priceTag.textContent = `$${price}`;
   priceTag.className = 'priceTagShoppingList';
 
+  const quantityControl = createQuantityControl();
+
   const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'X';
+  deleteButton.textContent = 'Remove';
   deleteButton.className = 'delete-btn';
-  deleteButton.addEventListener('click', () => product.remove());
+  deleteButton.addEventListener('click', () => {
+    product.remove();
+    updatePriceDisplay();
+
+  });
 
   product.appendChild(image);
 
   productDetail.appendChild(title);
-  productDetail.appendChild(productId);
-
+  productDetail.appendChild(priceTag);
+   productDetail.appendChild(productId);
   product.appendChild(productDetail);
   product.appendChild(quantityControl);
-  product.appendChild(priceTag);
   product.appendChild(deleteButton);
 
   shoppingList.appendChild(product);

@@ -1,0 +1,434 @@
+/* ======================= LAYOUT CHUNG ======================= */
+body {
+   margin-top: 20vh;
+  padding-left: 10%;
+  height: 1svh;
+}
+.shoppingCartContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4%;
+  width: 80%;
+  height: 70vh;
+  box-sizing: border-box;
+
+
+}
+.shoppingMain,
+.orderSumary {
+  width: 48%;
+  min-width: 300px;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid #EBEBEB;
+  border-radius: 10px;
+  background-color: white;
+  max-height: 90vh;
+}
+
+
+/* ======================= DANH SÁCH SẢN PHẨM ======================= */
+
+.shoppingList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  max-height: 400px; /* hoặc tùy theo bạn muốn giới hạn chiều cao */
+  padding-right: 8px; /* giúp hiện scroll gọn gàng */
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  
+}
+
+/* Mỗi sản phẩm */
+.product-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Ảnh sản phẩm */
+.imageShoppingList {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Chi tiết sản phẩm */
+.productDetail {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tiêu đề sản phẩm */
+.titleShoppingList {
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0 0 4px 0;
+}
+
+/* Mã sản phẩm */
+.productIdShoppingList {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Giá */
+.priceTagShoppingList {
+  font-weight: 700;
+  font-size: 16px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Nút xóa */
+button.delete-btn {
+  margin-left: 12px;
+  margin-top: auto  ;
+  padding: 6px 10px;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+
+/* ======================= TĂNG GIẢM SỐ LƯỢNG ======================= */
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-grow: 1;
+  max-width: 180px; /* hoặc auto nếu bạn muốn co giãn hoàn toàn */
+}
+
+
+.quantity-control button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  background-color: white;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.quantity-control .quantity-input {
+  width: 40px;
+  height: 28px;
+  margin: 0 6px;
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+
+/* ======================= TÓM TẮT ĐƠN HÀNG ======================= */
+
+.codeInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#discountCode,
+#bonusNumber {
+  border: none;
+  outline: none;
+  flex: 1;
+  min-width: 200px;
+  height: 28px;
+  font-size: 14px;
+}
+
+.applyCode {
+  background-color: white;
+  border: 1px solid black;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+/* ======================= GIÁ CẢ ======================= */
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.subtotal, .estimatedTax, .shoppingFee, .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+
+/* ======================= THANH TOÁN ======================= */
+
+button.checkout {
+  width: 100%;
+  height: 48px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+/* ======================= HOVER ======================= */
+
+button.delete-btn:hover,
+button.minus-btn:hover,
+button.plus-btn:hover,
+button.checkout:hover,
+button.applyCode:hover {
+  background-color: #22abca;
+  color: white;
+}
+
+
+/* ======================= RESPONSIVE ======================= */
+
+@media screen and (max-width: 750px) {
+  body {
+    padding-top: 30pt;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+  }
+
+  .shoppingCartContent {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    height: auto;
+  }
+
+  .shoppingMain,
+  .orderSumary {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .shoppingList {
+    max-height: 300px;
+    overflow-y: auto;
+    gap: 12px;
+    padding-right: 4px;
+  }
+
+  .product-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #fafafa;
+  }
+
+  .imageShoppingList {
+    width: 80px;
+    height: 80px;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .productDetail {
+    width: 100%;
+  }
+
+  .quantity-control {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .priceTagShoppingList {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .delete-btn {
+  background: #FF4D4F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+
+  .codeInput {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .applyCode {
+    width: 100%;
+  }
+
+  .prices div {
+    font-size: 15px;
+  }
+
+  button.checkout {
+    width: 100%;
+    height: 44px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 1024px) {
+  body {
+    padding-top: 80pt;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 15px;
+  }
+
+  .shoppingCartContent {
+    display: flex;
+    flex-direction: row;         /* Đổi sang dọc */
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+  }
+
+  .shoppingMain,
+  .orderSumary {
+    width: 100%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-width: none;
+  }
+
+  .shoppingList {
+    max-height: 450px;
+    overflow-y: auto;
+    padding-right: 6px;
+    gap: 12px;
+  }
+
+  .product-item {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+  }
+
+  .imageShoppingList {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .productDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .titleShoppingList {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .productIdShoppingList {
+    font-size: 14px;
+    color: #666;
+  }
+
+  .priceTagShoppingList {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .quantity-control {
+    margin-top: 6px;
+  }
+
+  .delete-btn {
+    font-size: 15px;
+    padding: 8px 12px;
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .codeInput {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .applyCode {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .prices div {
+    font-size: 16px;
+  }
+
+  button.checkout {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+}
