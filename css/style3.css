@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+}
+
+.banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-banner {
+    background-color: #000;
+    color: white;
+    padding: 80px 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 20px 0 5px 0;
+    overflow: hidden;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-banner h2 {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.hero-banner .subtext {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.hero-banner .description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 20px 0 30px;
+}
+
+.hero-banner .hero-image {
+    width: 320px;
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+    padding: 5px 0 20px;
+}
+
+.product-item {
+    background-color: white;
+    padding: 24px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.product-item h2 {
+    font-size: 22px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.product-item .description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.shop-btn {
+    background-color: transparent;
+    border: 1px solid #1d1d1f;
+    color: #1d1d1f;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+    background-color: #e5e5ec;
+    color: rgb(3, 3, 3);
+}
+
+.highlight-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.highlight-btn:hover {
+    background-color: #222;
+    color: white;
+    border-color: white;
+}
