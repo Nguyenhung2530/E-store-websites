@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
         fetch('https://dummyjson.com/products/search?q=earphones&limit=4').then(res => res.json())
     ])
     .then(([smartphones, laptops, headphones, ipads, earphones]) => {
+        
         allProducts.smartphones = smartphones.products;
         allProducts.laptops = laptops.products;
         allProducts.headphones = headphones.products;
         allProducts.ipads = ipads.products;
         allProducts.earphones = earphones.products;
 
-        // Tạo mảng tổng hợp từ tất cả sản phẩm
         const allProductsArray = [
             ...allProducts.smartphones,
             ...allProducts.laptops,
@@ -33,10 +33,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Tạo các mảng sản phẩm hỗn hợp cho từng tab
         const mixedProducts = {
-            newArrival: shuffleArray([...allProductsArray]).slice(0, 4),
-            bestSellers: shuffleArray([...allProductsArray]).slice(0, 4),
-            featured: shuffleArray([...allProductsArray]).slice(0, 4)
+            
+            newArrival: [
+                ...shuffleArray(allProducts.smartphones).slice(0, 3),
+                ...shuffleArray(allProducts.laptops).slice(0, 3),
+                ...shuffleArray(allProducts.headphones).slice(0, 3),
+                ...shuffleArray(allProducts.ipads).slice(0, 3)
+            ],
+            
+            bestSellers: [
+                ...shuffleArray(allProducts.laptops).slice(0, 3),
+                ...shuffleArray(allProducts.smartphones).slice(0, 3),
+                ...shuffleArray(allProducts.headphones).slice(0, 3),
+                ...shuffleArray(allProducts.earphones).slice(0, 3)
+            ],
+           
+            featured: [
+                ...shuffleArray(allProducts.ipads).slice(0, 3),
+                ...shuffleArray(allProducts.earphones).slice(0, 3),
+                ...shuffleArray(allProducts.smartphones).slice(0, 3),
+                ...shuffleArray(allProducts.laptops).slice(0, 3)
+            ]
         };
+
+        // Xáo trộn sản phẩm trong mỗi tab để thứ tự ngẫu nhiên
+        mixedProducts.newArrival = shuffleArray(mixedProducts.newArrival);
+        mixedProducts.bestSellers = shuffleArray(mixedProducts.bestSellers);
+        mixedProducts.featured = shuffleArray(mixedProducts.featured);
 
         // Hiển thị tab New Arrival ban đầu
         displayProducts(mixedProducts.newArrival);
@@ -119,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const discountGrid = document.querySelector('.product-discount .product-grid');
         if (!discountGrid) return;
 
-        // Lấy ngẫu nhiên 4 sản phẩm
-        const discountProducts = shuffleArray([...products]).slice(0, 4);
+        // Lấy ngẫu nhiên 8 sản phẩm
+        const discountProducts = shuffleArray([...products]).slice(0, 8);
 
         discountGrid.innerHTML = discountProducts.map(product => {
             const discountedPrice = product.price;
