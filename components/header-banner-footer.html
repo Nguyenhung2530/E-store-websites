@@ -2,15 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://trusted.com;">
-  <title>Cyber Website</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="header-banner-footer.css" />
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- HEADER -->
   <header class="header-top">
     <div class="container">
       <div class="logo">
@@ -35,8 +34,6 @@
       <div class="mobile-menu-icon" onclick="toggleMobileNav()">☰</div>
     </div>
   </header>
-
-  <!-- Mobile Nav Menu -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#">Home</a>
     <a href="#">About</a>
@@ -44,48 +41,71 @@
     <a href="#">Blog</a>
   </div>
 
-  <!-- Banner -->
-  <div class="banner-container">
-    <div class="hero-banner">
-      <div class="hero-text">
-        <p class="subtext">Pro. Beyond.</p>
-        <h2>iPhone 14 Pro</h2>
-        <p class="description">Created to change everything for the better. For everyone.</p>
-        <button class="shop-btn highlight-btn" onclick="handleShopNow('iPhone 14 Pro')">Buy Now</button>
+  <!-- BANNER1 -->
+  
+
+  <div class="wrapper-banner">
+<section class="hero">
+    <div class="text">
+      <h4>Pro.Beyond.</h4>
+      <h1>iPhone 14 <strong>Pro</strong></h1>
+      <p>Created to change everything for the better. For everyone.</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="image-wrapper">
+      <img src="iphone.png" alt="iPhone 14 Pro" />
+    </div>
+  </section>
+<section class="grid-container">
+    <div class="item small-top ps5-bg">
+      <div class="text">
+        <h2>Playstation 5</h2>
+        <p>Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</p>
       </div>
-      <img src="iphone.png" alt="iPhone 14 Pro" class="hero-image">
+      <img src="ps5.png" alt="PS5" />
+    </div>
+    
+      <div class="item small-bottom">
+      <div class="item mid-bg">
+        <div class="text">
+          <h2>Apple AirPods Max</h2>
+          <p>Computational audio. Listen, it’s powerful.</p>
+        </div>
+        <img src="airpods.png" alt="AirPods Max" />
+      </div>
+      <div class="item dark-bg">
+        <div class="text">
+          <h2>Apple Vision Pro</h2>
+          <p>An immersive way to experience entertainment.</p>
+        </div>
+        <img src="visionpro.png" alt="Vision Pro" />
+      </div>
     </div>
 
-    <div class="product-grid">
-      <div class="product-item">
-        <img src="ps5.jpg" alt="PlayStation 5">
-        <h2>PlayStation 5</h2>
-        <p class="description">Incredibly powerful CPUs, GPUs, and an SSD with integrated I/O will redefine your PlayStation experience.</p>
-        <button class="shop-btn" onclick="handleShopNow('PlayStation 5')">Buy Now</button>
-      </div>
-      <div class="product-item">
-        <img src="macbook2.png" alt="MacBook Air">
+    <!-- BANNER2 -->
 
-        <h2>MacBook Air</h2>
-        <p class="description">The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</p>
-        <button class="shop-btn" onclick="handleShopNow('MacBook Air')">Buy Now</button>
+    <div class="item large light-bg">
+      <div class="text">
+        <h2>Macbook Air</h2>
+        <p>The new 15-inch MacBook Air makes room for more of what you love with a spacious Liquid Retina display.</p>
+        <button>Shop Now</button>
       </div>
-      <div class="product-item">
-        <img src="airpods.png" alt="AirPods Max">
-        <h2>Apple AirPods Max</h2>
-        <p class="description">Computational audio. Listen, it's powerful.</p>
-        <button class="shop-btn" onclick="handleShopNow('AirPods Max')">Buy Now</button>
-      </div>
-      <div class="product-item">
-        <img src="visionpro.jpeg" alt="Apple Vision Pro">
-        <h2>Apple Vision Pro</h2>
-        <p class="description">An immersive way to experience entertainment.</p>
-        <button class="shop-btn" onclick="handleShopNow('Apple Vision Pro')">Buy Now</button>
+      <div class="image-wrapper">
+        <img src="macbook2.png" alt="MacBook Air" />
       </div>
     </div>
-  </div>
+  </section>
+</div>
 
-  <!-- Footer -->
+  <section class="banner">
+    <div class="content">
+      <h1>Big Summer <span>Sale</span></h1>
+      <p>Commodo fames vitae vitae leo mauris in. Eu consequat.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-left">
@@ -130,5 +150,6 @@
       </div>
     </div>
   </footer>
+  <script src="header-banner-footer.js"></script>
 </body>
 </html>

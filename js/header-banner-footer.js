@@ -3,8 +3,6 @@ function toggleMobileNav() {
   nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 
-function handleShopNow(product) {
-  window.location.href = `product.html?product=${encodeURIComponent(product)}`;
-}
+console.log("Apple Layout Loaded");
 
 console.log("Footer script loaded.");
